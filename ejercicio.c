@@ -166,7 +166,7 @@ int main()
             {
                 printf("\nIngrese nombre del producto: ");
 
-                scanf("%s", nombres[indiceVacio]);
+                scanf(" %[^\n]", nombres[indiceVacio]);
 
                 encontrado = 0;
 
@@ -261,7 +261,7 @@ int main()
         {
             printf("\nIngrese nombre del producto a editar: ");
 
-            scanf("%s", buscar);
+            scanf(" %[^\n]", buscar);
 
             encontrado = -1;
 
@@ -289,7 +289,7 @@ int main()
             {
                 printf("\nNuevo nombre del producto: ");
 
-                scanf("%s", nombres[encontrado]);
+                scanf(" %[^\n]", nombres[encontrado]);
 
                 ptrDemanda = &demanda[encontrado];
 
@@ -353,7 +353,7 @@ int main()
         {
             printf("\nIngrese nombre del producto a eliminar: ");
 
-            scanf("%s", buscar);
+            scanf(" %[^\n]", buscar);
 
             encontrado = -1;
 
