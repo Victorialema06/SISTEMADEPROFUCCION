@@ -34,11 +34,11 @@ int main()
         printf(" SISTEMA INDUSTRIAL DE PRODUCCION\n");
         printf("====================================\n");
 
-        printf("1. Registrar componente\n");
-        printf("2. Editar componente\n");
-        printf("3. Eliminar componente\n");
+        printf("1. Registrar producto\n");
+        printf("2. Editar producto\n");
+        printf("3. Eliminar producto\n");
         printf("4. Analizar produccion\n");
-        printf("5. Mostrar componentes\n");
+        printf("5. Mostrar producto\n");
         printf("6. Salir\n");
 
         printf("\nSeleccione una opcion: ");
