@@ -1,9 +1,6 @@
 #include <stdio.h>
 
 /*
-
-INICIO DEL SISTEMA DE PRODUCCION
-
 Este programa permite administrar la produccion
 de una fabrica de componentes electronicos.
 
@@ -24,7 +21,6 @@ Restricciones cumplidas:
 - Sin struct
 - Sin archivos
 - Sin funciones creadas por el usuario
-
 */
 
 int main()
@@ -119,7 +115,7 @@ int main()
         printf("1. Registrar productos\n");
         printf("2. Editar productos\n");
         printf("3. Eliminar productos\n");
-        printf("4. Calcular produccion\n");
+        printf("4. Calcular capacidad de produccion\n");
         printf("5. Mostrar productos\n");
         printf("6. Salir\n");
 
@@ -164,7 +160,7 @@ int main()
             }
             else
             {
-                printf("\nIngrese nombre del producto: ");
+                printf("\nIngrese nombre del producto a fabricar: ");
 
                 scanf(" %[^\n]", nombres[indiceVacio]);
 
@@ -204,7 +200,7 @@ int main()
                 {
                     ptrDemanda = &demanda[indiceVacio];
 
-                    printf("Ingrese demanda requerida (unidades): ");
+                    printf("Ingrese demanda requerida de fabricacion (unidades): ");
 
                     scanf("%d", ptrDemanda);
 
@@ -217,7 +213,7 @@ int main()
 
                     ptrTiempo = &tiempo[indiceVacio];
 
-                    printf("Ingrese tiempo de fabricacion por unidad (horas): ");
+                    printf("Ingrese el tiempo de fabricacion por unidad (horas): ");
 
                     scanf("%f", ptrTiempo);
 
@@ -230,7 +226,7 @@ int main()
 
                     ptrRecursos = &recursos[indiceVacio];
 
-                    printf("Ingrese recursos necesarios por unidad: ");
+                    printf("Ingrese el numero de componentes necesarios por unidad: ");
 
                     scanf("%f", ptrRecursos);
 
@@ -293,7 +289,7 @@ int main()
 
                 ptrDemanda = &demanda[encontrado];
 
-                printf("Nueva demanda requerida (unidades): ");
+                printf("Ingrese la nueva demanda de productos requerida (unidades): ");
 
                 scanf("%d", ptrDemanda);
 
@@ -306,7 +302,7 @@ int main()
 
                 ptrTiempo = &tiempo[encontrado];
 
-                printf("Nuevo tiempo de fabricacion (horas): ");
+                printf("Ingrese el nuevo tiempo de fabricacion por unidad (horas): ");
 
                 scanf("%f", ptrTiempo);
 
@@ -319,7 +315,7 @@ int main()
 
                 ptrRecursos = &recursos[encontrado];
 
-                printf("Nuevos recursos necesarios: ");
+                printf("Ingrese la nueva cantidad de componentes necesarios por unidad: ");
 
                 scanf("%f", ptrRecursos);
 
@@ -444,7 +440,7 @@ int main()
             printf("Recursos totales requeridos: %.2f unidades\n",
             recursos_totales);
 
-            printf("\nIngrese tiempo disponible de fabrica (horas): ");
+            printf("\nIngrese las horas operativas disponibles para la linea de produccion (horas): ");
 
             scanf("%f", &limite_tiempo);
 
@@ -455,7 +451,7 @@ int main()
                 scanf("%f", &limite_tiempo);
             }
 
-            printf("Ingrese recursos disponibles de fabrica: ");
+            printf("Ingrese la cantidad de componentes disponibles en fabrica: ");
 
             scanf("%f", &limite_recursos);
 
