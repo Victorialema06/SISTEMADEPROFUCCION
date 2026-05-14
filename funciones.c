@@ -70,7 +70,7 @@ void registrarProducto(
         return;
     }
 
-    printf("\nIngrese nombre del componente a fabricar: ");
+    printf("\nIngrese nombre del producto a fabricar: ");
 
     scanf(" %[^\n]", nombres[indiceVacio]);
 
@@ -81,7 +81,7 @@ void registrarProducto(
 
     if(existe != -1 && existe != indiceVacio)
     {
-        printf("\nERROR: El componente ya existe.\n");
+        printf("\nERROR: El producto ya existe.\n");
 
         nombres[indiceVacio][0] = '\0';
 
@@ -225,7 +225,7 @@ void eliminarProducto(
 
     int posicion;
 
-    printf("\nIngrese nombre del componente a eliminar: ");
+    printf("\nIngrese nombre del producto a eliminar: ");
 
     scanf(" %[^\n]", buscar);
 
@@ -233,7 +233,7 @@ void eliminarProducto(
 
     if(posicion == -1)
     {
-        printf("\nERROR: Componente no encontrado.\n");
+        printf("\nERROR: producto no encontrado.\n");
 
         return;
     }
@@ -246,11 +246,11 @@ void eliminarProducto(
 
     recursos[posicion] = 0;
 
-    printf("\nComponente eliminado correctamente.\n");
+    printf("\nproducto eliminado correctamente.\n");
 }
 
 /* ==================================================
-MOSTRAR COMPONENTES
+MOSTRAR producto
 ================================================== */
 
 void mostrarProductos(
@@ -263,14 +263,14 @@ void mostrarProductos(
     int i;
 
     printf("\n====================================\n");
-    printf(" COMPONENTES REGISTRADOS\n");
+    printf(" PRODUCTOS REGISTRADOS\n");
     printf("====================================\n");
 
     for(i = 0; i < MAX; i++)
     {
         if(nombres[i][0] != '\0')
         {
-            printf("\nComponente %d\n", i + 1);
+            printf("\nproducto %d\n", i + 1);
 
             printf("Nombre: %s\n", nombres[i]);
 
@@ -338,7 +338,7 @@ void calcularProduccion(
     printf("\nCarga operativa requerida: %.2f horas\n",
     tiempoTotal);
 
-    printf("Materia prima requerida: %.2f unidades\n",
+    printf("Componentes requerida: %.2f unidades\n",
     recursosTotales);
 
     printf("\nIngrese el tiempo disponible para la fabricacion (horas): ");
@@ -375,7 +375,7 @@ void calcularProduccion(
         printf("\nLa fabrica puede cumplir los pedidos.\n");
 
         printf("La capacidad operativa y el stock\n");
-        printf("de materiales son suficientes.\n");
+        printf("de componentes son suficientes.\n");
     }
     else
     {
@@ -388,7 +388,7 @@ void calcularProduccion(
 
         if(recursosTotales > stockMateriales)
         {
-            printf("- Materia prima insuficiente.\n");
+            printf("- Componentes insuficiente.\n");
         }
     }
 }
